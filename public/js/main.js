@@ -2,7 +2,7 @@
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
         navigator.serviceWorker
-            .register("/public/sw.js")
+            .register("/sw.js")
             .then(function() {
                 console.log("Service Worker registration is successful");
             })
