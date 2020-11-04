@@ -12,22 +12,18 @@ webPush.setVapidDetails(
 );
 
 var pushSubscription = {
-    endpoint: "https://fcm.googleapis.com/fcm/send/c8-fGPFvlTg:APA91bFDm3X0jfbjbajtHTVn2YkGNcy13WHgur5Xj_0cMtA8pJUy7CriKjuLcFCRtUbwHzGQwaqmxzC73F-3dxLg502E3PtRhigeD4dhOUOsZZuN3DnVG6TaZU-G7jTeceIfXpwri4ye",
+    endpoint: "https://fcm.googleapis.com/fcm/send/e0K8ZiYaCqU:APA91bH6uPsqw3Z_n16_a5nr8Cjx4MXq_IxPCrsL-1mgZFeigG9piSqFEgNE39l7_M_WgC8N_xHCfmoKNC5Tw9H1ZEsRRc3wbQ_6ZYSNft-pvwujDO4gkAixctGBGuKuqMghgKF1H7hc",
     keys: {
-        "p256dh": "BH1ol5gk8SC59MWBz1GI3IrKpeLLcNm81kwNrcNUqZEXjMjNfRsKtbsROMpg90tAixZzirzPv2YD2MyaHdjK6e0=",
-        "auth": "4NLt08t7szuWqkcCJg+HNA==",
+        p256dh: "BJlg/V7SUW/rnJyRYXtomkDXA/mdOAxNd+K0SxlTXz2K+VEd+ly+p6vibRlXVyXub9Czy3bxGbhACrbmco8J8Ns=",
+        auth: "RQ7Ta/17Fhf0LzPeFTt6xw==",
     },
 };
 
-var payload = 'Selamat Aplikasi Anda sudah dapat menerima push notifikasi!'
+var payload = "Selamat Aplikasi Anda sudah dapat menerima push notifikasi!";
 
 var options = {
-    gcmAPIKey = '215015656581',
-    TTL: 60
-}
+    gcmAPIKey: "215015656581",
+    TTL: 60,
+};
 
-webPush.sendNotification(
-    pushSubscription,
-    payload,
-    options
-)
+webPush.sendNotification(pushSubscription, payload, options);

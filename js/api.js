@@ -258,8 +258,7 @@ function getTeamById() {
 
 // siap data untuk standings
 function getStandings() {
-    // check in caches
-    if ("cachs" in window) {
+    if ("caches" in window) {
         caches.match(endpoint_league_standings).then(function(response) {
             if (response) {
                 response.json().then(function(data) {

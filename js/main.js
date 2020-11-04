@@ -20,17 +20,17 @@ if ("serviceWorker" in navigator) {
 if ("Notification" in window) {
     requestPermission();
 } else {
-    console.log("Browser tidak mendukung notifikasi.");
+    console.log("The browser does not support notifications.");
 }
 
 // Meminta ijin menggunkan Notifikasi API
 function requestPermission() {
     Notification.requestPermission().then(function(result) {
         if (result === "denied") {
-            console.log("Fitur Notifikasi tidak dijalankan");
+            console.log("Notification feature is not running");
             return;
         } else if (result === "default") {
-            console.log("Pengguna menutup kotak dialog notifikation");
+            console.log("The user closes the notification dialog box");
             return;
         }
 
@@ -40,16 +40,16 @@ function requestPermission() {
                     .subscribe({
                         userVisibleOnly: true,
                         applicationServerKey: urlBase64ToUint8Array(
-                            "BKxSEnhNo_jmb_ImsK7qmB3fOX0VXyQDzx7Yeb3LHSVK3KNy44DrTJDeNouGmOSdXyfvBcwSvvly9l517vOYpJM"
+                            "BA1WVF9GDBeLEVa_EPf0rQJHsPSbbz8fN37vvDcCC2sAR6ovHJ9gecYjQtx5bm9qVbIktQWIR7l-_5UPR2oN2qQ"
                         ),
                     })
                     .then(function(subscribe) {
                         console.log(
-                            "Berhasil melakukan subscribe dengan endpoint",
+                            "Successfully subscribed with endpoints",
                             subscribe.endpoint
                         );
                         console.log(
-                            "Berhasil melakukan subscribe dengan p256dh key: ",
+                            "Successfully subscribed with key p256dh: ",
                             btoa(
                                 String.fromCharCode.apply(
                                     null,
@@ -58,7 +58,7 @@ function requestPermission() {
                             )
                         );
                         console.log(
-                            "Berhasil melakukan subsctibe dengan auth key: ",
+                            "Successfully subscribe with auth key: ",
                             btoa(
                                 String.fromCharCode.apply(
                                     null,
@@ -68,7 +68,7 @@ function requestPermission() {
                         );
                     })
                     .catch(function(e) {
-                        console.log("Tidak dapat melakukan subscribe");
+                        console.log("Unable to subscribe");
                     });
             });
         }

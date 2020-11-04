@@ -1,7 +1,7 @@
 {
-    "name": "Football League",
-    "short_name": "Football League",
-    "description": "football league information",
+    "name": "English League",
+    "short_name": "English League",
+    "description": "English league information",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#ff9642",
